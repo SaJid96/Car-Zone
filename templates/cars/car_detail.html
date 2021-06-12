@@ -12,8 +12,8 @@
         <div class="breadcrumb-areas">
             <h1>{{single_car.car_title}}</h1>
             <ul class="breadcrumbs">
-                <li><a href="index.html">Home</a></li>
-                <li class="active">{{single_car.car_title}}</li>
+                <li><a href="{%url 'home' %}">Home</a></li>
+                <li class="active">{{user.first_name}}</li>
             </ul>
         </div>
     </div>
@@ -28,7 +28,7 @@
                 <div class="car-details-section">
                     <!-- Heading start -->
                     <div class="heading-car clearfix">
-                      <!-- {% include 'includes/messages.html' %} -->
+                      {% include 'includes/messages.html' %}
                         <div class="pull-left">
                             <h3>{{single_car.car_title}}</h3>
                             <h6>
@@ -155,7 +155,7 @@
                 <div class="sidebar-right">
                     <!-- Advanced search start -->
                     <div class="widget advanced-search d-none-992">
-                        <button class="btn btn-outline-danger bomd btn-block btn-lg" data-toggle="modal" data-target="#">Send message</button>
+                        <button class="btn btn-outline-danger bomd btn-block btn-lg" data-toggle="modal" data-target="#inquiryModal">Send message</button>
 
 
                         <br>
@@ -211,7 +211,7 @@
                     </div>
 
                     <!-- Inquiry Modal -->
-                    <div class="modal fade" id="#" role="dialog">
+                    <div class="modal fade" id="inquiryModal" role="dialog">
                       <div class="modal-dialog">
                         <div class="modal-content">
                           <div class="contact-dealer modal-header">
@@ -222,7 +222,7 @@
                             </button>
                           </div>
                           <div class="modal-body">
-                            <form action="'inquiry.html" method="POST">
+                            <form action="{% url 'inquiry' %}" method="POST">
                               {% csrf_token %}
 
                               {% if user.is_authenticated %}

@@ -1,6 +1,8 @@
-from django.shortcuts import render
+from django.shortcuts import render,redirect
 from  .models import Team
 from cars.models import Car
+from django.contrib.auth.models import User
+from django.contrib import messages
 
 # Create your views here.
 def home(request):
@@ -36,4 +38,15 @@ def services(request):
 
 
 def contact(request):
-    return render(request,'pages/contact.html')
+     if request.method == 'POST':
+        name = request.POST['name']
+        email = request.POST['email']
+        subject = request.POST['subject']
+        phone = request.POST['phone']
+        message = request.POST['message']
+
+        
+        messages.success(request, 'Thank you for contacting us. We will get back to you shortly')
+        return redirect('contact')
+
+     return render(request,'pages/contact.html')
