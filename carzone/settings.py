@@ -24,7 +24,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'g$ic89z3klf7a%(9_mq%ibt&6^j4b#l$!0wp(y&=qtzzjbli9q'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = true
 
 ALLOWED_HOSTS = ['peaceful-ravine-54747.herokuapp.com' 'carzoneapp.co', 'www.carzoneapp.co']
 
