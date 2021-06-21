@@ -13,6 +13,7 @@ https://docs.djangoproject.com/en/3.0/ref/settings/
 import os
 import dj_database_url
 
+
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
@@ -35,7 +36,7 @@ INSTALLED_APPS = [
     'cars.apps.CarsConfig',
     'pages.apps.PagesConfig',
     'accounts.apps.AccountsConfig',
-     'contacts.apps.ContactsConfig',
+    'contacts.apps.ContactsConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -48,7 +49,6 @@ INSTALLED_APPS = [
     'allauth',
     'allauth.account',
     'allauth.socialaccount',
-
     # Providers
     'allauth.socialaccount.providers.facebook',
     'allauth.socialaccount.providers.google',
@@ -63,7 +63,6 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'whitenoise.middleware.WhiteNoiseMiddleware',
-
 ]
 
 ROOT_URLCONF = 'carzone.urls'
@@ -101,6 +100,7 @@ WSGI_APPLICATION = 'carzone.wsgi.application'
 # }
 
 DATABASES = {'default': dj_database_url.config(default='postgres://postgres:password@localhost/carzone_db')}
+
 # Password validation
 # https://docs.djangoproject.com/en/3.0/ref/settings/#auth-password-validators
 
