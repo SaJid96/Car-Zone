@@ -21,8 +21,6 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/3.0/howto/deployment/checklist/
 
-# SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'g$ic89z3klf7a%(9_mq%ibt&6^j4b#l$!0wp(y&=qtzzjbli9q'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -86,23 +84,8 @@ TEMPLATES = [
 WSGI_APPLICATION = 'carzone.wsgi.application'
 
 
-# Database
-# https://docs.djangoproject.com/en/3.0/ref/settings/#databases
 
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.postgresql',
-#         'NAME':'carzone_db',
-#         'USER':'postgres',
-#         'PASSWORD':'password',
-#         'HOST':'localhost',
-#     }
-# }
 
-DATABASES = {'default': dj_database_url.config(default='postgres://postgres:password@localhost/carzone_db')}
-
-# Password validation
-# https://docs.djangoproject.com/en/3.0/ref/settings/#auth-password-validators
 
 AUTH_PASSWORD_VALIDATORS = [
     {
