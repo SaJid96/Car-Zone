@@ -25,7 +25,7 @@ db.sqlite3-journal
 *.so
 
 # Distribution / packaging
-carzone/**
+**/carzone
 .Python
 build/
 develop-eggs/
