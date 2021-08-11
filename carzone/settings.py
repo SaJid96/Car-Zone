@@ -139,6 +139,6 @@ MESSAGE_TAGS = {
 
 SITE_ID = 1
 
-
+#dede
 # Whitenoise settings
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
